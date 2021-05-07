@@ -6,5 +6,9 @@ export const RideTicketHolders = () => {
         contentTarget.innerHTML += `<div class="rider person"></div>`
         }
     )
+    eventHub.addEventListener("fullPackageTicketPurchased", customEvent => {
+        contentTarget.innerHTML += `<div class="bigSpender person"></div>`
+        }
+    )
 }
 
