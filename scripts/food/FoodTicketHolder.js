@@ -1,7 +1,9 @@
-export const FoodTicket = () => {
-    contentTarget.innerHTML = `
-        <div class="foodTicket">
-        <button id="foodTicket">Food Ticket</button>
-        </div>
-    `
+const contentTarget = document.querySelector(".food")
+const eventHub = document.querySelector("#state-fair")
+
+export const FoodTicketHolders = () => {
+    eventHub.addEventListener("foodTicketPurchased", customEvent => {
+        contentTarget.innerHTML += `<div class="eater person"></div>`
+        }
+    )
 }
